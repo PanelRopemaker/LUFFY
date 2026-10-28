@@ -88,15 +88,15 @@ LUFFY/
 - [ ] **luffy/verl/verl/mix_src/mix_fsdp_worker.py:263** - a sharding manager that do nothing?
 - [ ] **luffy/verl/verl/mix_src/mix_fsdp_worker.py:391** - here, we should return all metrics
 - [ ] **luffy/verl/verl/mix_src/mix_fsdp_worker.py:517** - support DCP and save sharded checkpoints
-- [ ] **luffy/verl/verl/mix_trainer.py:90** - add other ways to estimate advantages
-- [ ] **luffy/verl/verl/mix_trainer.py:168** - support each role have individual ray_worker_group_cls,
-- [ ] **luffy/verl/verl/mix_trainer.py:293** - we have to make sure the batch size is divisible by the dp size
-- [ ] **luffy/verl/verl/mix_trainer.py:599** - make a canonical logger that supports various backend
-- [ ] **luffy/verl/verl/mix_trainer.py:637** - add response length
-- [ ] **luffy/verl/verl/mix_trainer_acc_rebatch.py:63** - we have to make sure the batch size is divisible by the dp size
-- [ ] **luffy/verl/verl/mix_trainer_acc_rebatch.py:437** - make a canonical logger that supports various backend
-- [ ] **luffy/verl/verl/mix_trainer_acc_rebatch.py:592** - check path
-- [ ] **luffy/verl/verl/mix_trainer_acc_rebatch.py:628** - from remote not implemented yet
+- [ ] **luffy/verl/verl/mix_src/mix_trainer.py:90** - add other ways to estimate advantages
+- [ ] **luffy/verl/verl/mix_src/mix_trainer.py:168** - support each role have individual ray_worker_group_cls,
+- [ ] **luffy/verl/verl/mix_src/mix_trainer.py:293** - we have to make sure the batch size is divisible by the dp size
+- [ ] **luffy/verl/verl/mix_src/mix_trainer.py:599** - make a canonical logger that supports various backend
+- [ ] **luffy/verl/verl/mix_src/mix_trainer.py:637** - add response length
+- [ ] **luffy/verl/verl/mix_src/mix_trainer_acc_rebatch.py:63** - we have to make sure the batch size is divisible by the dp size
+- [ ] **luffy/verl/verl/mix_src/mix_trainer_acc_rebatch.py:437** - make a canonical logger that supports various backend
+- [ ] **luffy/verl/verl/mix_src/mix_trainer_acc_rebatch.py:592** - check path
+- [ ] **luffy/verl/verl/mix_src/mix_trainer_acc_rebatch.py:628** - from remote not implemented yet
 - [ ] **luffy/verl/verl/models/llama/megatron/layers/parallel_attention.py:380** - llama does not have dropout in the config??
 - [ ] **luffy/verl/verl/models/llama/megatron/layers/parallel_decoder.py:78** - add sequence parallel operator reduce_scatter here
 - [ ] **luffy/verl/verl/models/llama/megatron/layers/parallel_decoder.py:86** - add sequence parallel operator all_gather here
@@ -278,3 +278,4 @@ LUFFY/
 2. Implement the functionality
 3. Test your implementation
 4. Update this README when TODOs are completed
+
