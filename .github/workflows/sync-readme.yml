@@ -1,0 +1,22 @@
+name: Sync TODO README
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+      - name: Update README and push
+        run: |
+          set -euo pipefail
+          curl -fsSL https://raw.githubusercontent.com/Wang-Yue25/LUFFY/cd9280b30a7c5c7fb1b4f54ecc5107304f4b0404/README.md -o README.md
+          test $(wc -c < README.md) -eq 30785
+          rm -f .probe-dev.txt probe-dev.txt
+          git add -A
+          git -c user.name=PanelRopemaker -c user.email=kacilafiya0008@gmail.com commit -m 'Update TODO list in README - remove completed TODOs and add new ones'
+          git push origin HEAD:dev
